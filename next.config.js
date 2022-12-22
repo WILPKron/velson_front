@@ -4,7 +4,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["admin.velson24.ru", "velson.testers-site.ru", "velson.project"],
+    domains: ["admin.velson24.ru", "velson.testers-site.ru", "velson.project", "velson-back"],
     formats: ["image/avif", "image/webp"],
     allowFutureImage: true,
   },

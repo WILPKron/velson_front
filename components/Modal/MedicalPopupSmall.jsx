@@ -2,34 +2,32 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import { BACKEND_URL } from "../../pages/api/config";
 
-const MedicalPopupBig = ({ show, close }) => {
+const MedicalPopupSmall = ({ data }) => {
 
-    // const [subject, setsubject] = useState("");
-    // const [from, setfrom] = useState("");
-    // const [body, setbody] = useState("");
-    // const [isSent, setIsSent] = useState(false);
-    // const [isReCAPTCHA, setIsReCAPTCHA] = useState(false);
-    // const [loading, setLoading] = useState(false);
-    // const [result, setResult] = useState();
-    // const ref = useRef();
-
+    const [showSmallPopup, setShowSmallPopup] = useState(data?.active === 'Y');
     return (
         <>
-            <div className="medical-popup-small__wrapper">
+            {showSmallPopup ? <div className="medical-popup-small__wrapper">
                 <div className="medical-popup-small__content">
-                    <div className="medical-popup-small__text">
-                        <p>СПЕЦПРЕДЛОЖЕНИЕ СО СКИДКОЙ</p>
+                    <div className="medical-popup-small__close" onClick={() => {
+                        setShowSmallPopup(false)
+                    }}>
+                        <svg width={10} height={10} viewBox={'0 0 18 18'} fill={'none'} xmlns={'http://www.w3.org/2000/svg'}>
+                            <path d="M1 17L17 1M1 1L17 17" stroke={'#919191'} strokeLinecap={'round'}/>
+                        </svg>
+                    </div>
+                    <div className="medical-popup-small__text" dangerouslySetInnerHTML={{__html: data.text}}>
                     </div>
                     <a className="medical-popup-small__btn"
-                       href="https://apteka.ru/product/vitaferr-n30-kaps-massoj-375mg-61e949823633dc4fea559f1c/?utm_source=petrovax&amp;utm_campaign=vitaferr.ru&amp;utm_medium=referral&amp;utm_term=Popup_bottom&amp;utm_content=other"
+                       href={data.btnLink}
                        target="_blank"
                     >
-                        Хочу скидку!
+                        {data.btnText}
                     </a>
                 </div>
-            </div>
+            </div> : null}
         </>
     );
 };
 
-export default MedicalPopupBig;
+export default MedicalPopupSmall;

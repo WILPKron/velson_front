@@ -7,8 +7,8 @@ import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 
 import Modal from "../Modal";
-import MedicalPopupBig from "../Modal/MedicalPopupBig";
 import MedicalPopupSmall from "../Modal/MedicalPopupSmall";
+import MedicalPopupBig from "../Modal/medicalPopupBig";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -18,6 +18,8 @@ const Layout = ({ children, data }) => {
   const header = data?.header;
   const navbar = data?.navbar;
 
+  const large = data?.popupInfo?.large
+  const small = data?.popupInfo?.small
   const generateKey = (pre) => {
     return `${pre}_${new Date().getTime()}`;
   };
@@ -81,21 +83,17 @@ const Layout = ({ children, data }) => {
         variants={animationVariants}
         ref={ref}
       >
+
+        <MedicalPopupSmall data={small}/>
+        <MedicalPopupBig data={large}/>
+
         <Modal show={isModalOpen} close={() => setIsModalOpen(false)} />
-        <MedicalPopupBig></MedicalPopupBig>
-        <MedicalPopupSmall></MedicalPopupSmall>
         <div className="content-wrapper navbar__wrapper">
           <Link href="/">
             <Image
               src={images.logo}
               alt="logo"
               style={{ maxHeight: 40 }}
-              // onClick={() =>
-              //   window.scrollTo({
-              //     top: 0,
-              //     behavior: "smooth",
-              //   })
-              // }
               width={130}
             />
           </Link>
@@ -136,9 +134,9 @@ const Layout = ({ children, data }) => {
         >
           <div className="menu__content">
             <ul className="menu__col">
-              {firstData?.map((i) => (
+              {firstData?.map((i, index) => (
                 <li
-                  key={i.id}
+                  key={`${index}${i.id}`}
                   onClick={() => setIsMenuOpen(false)}
                   className="menu__item"
                 >
@@ -149,9 +147,9 @@ const Layout = ({ children, data }) => {
               ))}
             </ul>
             <ul className="menu__col">
-              {secondData?.map((i) => (
+              {secondData?.map((i, index) => (
                 <li
-                  key={i.id}
+                  key={`${index}${i.id}`}
                   onClick={() => setIsMenuOpen(false)}
                   className="menu__item"
                 >

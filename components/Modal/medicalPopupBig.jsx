@@ -1,39 +1,39 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { BACKEND_URL } from "../../pages/api/config";
-
-const MedicalPopupBig = ({ show, close }) => {
-
-    // const [subject, setsubject] = useState("");
-    // const [from, setfrom] = useState("");
-    // const [body, setbody] = useState("");
-    // const [isSent, setIsSent] = useState(false);
-    // const [isReCAPTCHA, setIsReCAPTCHA] = useState(false);
-    // const [loading, setLoading] = useState(false);
-    // const [result, setResult] = useState();
-    // const ref = useRef();
-
+const MedicalPopupBig = ({ data }) => {
+    const [showBigPopup, setShowBigPopup] = useState(data?.active === 'Y');
+    const hidePopup = () => {
+        setShowBigPopup(false)
+    }
+    useEffect(() => {
+        document.body.style.overflow = showBigPopup ? 'hidden' : ''
+    }, [showBigPopup])
+    
     return (
         <>
-            { false ? <div className="medical-popup-big__wrapper">
-                <div className="medical-popup-big__background"></div>
+            {showBigPopup ? <div className="medical-popup-big__wrapper">
+                <div className="medical-popup-big__background" onClick={hidePopup}></div>
                 <div className="medical-popup-big">
+                    <button className="medical-popup-big__close" onClick={hidePopup}>
+                        <svg width={20} height={20} viewBox={'0 0 18 18'} fill={'none'} xmlns={'http://www.w3.org/2000/svg'}>
+                            <path d="M1 17L17 1M1 1L17 17" stroke={'white'} strokeLinecap={'round'}/>
+                        </svg>
+                    </button>
                     <div className="medical-popup-big__image">
-                        <img src="https://vitaferr.ru/upload/iblock/1a1/34wc6dxirgig7erltki31b4qz1g4bpsf.png" alt=""/>
+                        <img src={'http://velson-back' + data.image} alt=""/>
                     </div>
                     <div className="medical-popup-big__content">
-                        <div className="medical-popup-big__text">
-                            <p><span>Спецпредложение</span><br/> со скидкой</p>
+                        <div className="medical-popup-big__text" dangerouslySetInnerHTML={{__html: data.description}}>
                         </div>
-                        <a href="https://apteka.ru/product/vitaferr-n30-kaps-massoj-375mg-61e949823633dc4fea559f1c/?utm_source=petrovax&utm_campaign=vitaferr.ru&utm_medium=referral&utm_term=Popup_main&utm_content=other" className="medical-popup-big__btn">
-                            Купить на Аптека.ру
+                        <a href={data.btnLink} className="medical-popup-big__btn" target="_blank">
+                            {data.btnText}
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 20" id="link" width={20} height={20}>
-                                <path d="M8 15l5-5-5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M8 15l5-5-5-5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
                             </svg>
                         </a>
                     </div>
                 </div>
-            </div> : null }
+            </div> : null}
         </>
     );
 };

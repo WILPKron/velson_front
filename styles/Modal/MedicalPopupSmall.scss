@@ -1,7 +1,8 @@
 .medical-popup-small__wrapper {
   position: fixed;
   top: 50%;
-  right: -21%;
+  right: 0;
+  transform: translateX(44%);
 }
 
 .medical-popup-small__content {
@@ -12,6 +13,7 @@
   border-radius: 50px;
   background-color: #bf2b45;
   padding: 10px 20px;
+  position: relative;
 }
 
 .medical-popup-small__btn {
@@ -33,4 +35,16 @@
   font-size: 18px;
   line-height: 1.1;
   white-space: nowrap;
+}
+
+.medical-popup-small__close {
+  position: absolute;
+  right: 0px;
+  top: -12px;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 8px;
+  line-height: 0;
+  cursor: pointer;
+  border: none;
 }

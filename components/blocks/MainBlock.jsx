@@ -169,7 +169,7 @@ const MainBlock = () => {
             autoPlay
             loop
             muted
-            require
+            require="true"
           >
             <source
               src={require("../../assets/videos/light.mp4")}

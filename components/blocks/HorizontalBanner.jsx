@@ -115,7 +115,7 @@ const HorizontalBanner = () => {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <p className="list__text">
+                  <div className="list__text">
                     <ul>
                       Помогает
                       <li>
@@ -128,7 +128,7 @@ const HorizontalBanner = () => {
                       <li>крепко спать всю ночь</li>
                       <li>легко просыпаться утром</li>
                     </ul>
-                  </p>
+                  </div>
                 </motion.div>
               </motion.div>
             )}
