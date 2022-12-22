@@ -1,0 +1,77 @@
+.medical-popup-big__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.medical-popup-big__background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.medical-popup-big {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  position: relative;
+  z-index: 2;
+}
+.medical-popup-big__content {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.medical-popup-big__text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 40px;
+
+  span {
+    color: #bd2d47;
+  }
+
+}
+.medical-popup-big__image {
+  max-width: 500px;
+}
+.medical-popup-big__btn {
+  text-transform: uppercase;
+  background-color: #bd2d47;
+  color: #fff;
+  padding: 13px 22px;
+  border-radius: 50px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+@media (max-width: 667px) {
+  .medical-popup-big__content {
+    padding: 20px
+  }
+  .medical-popup-big__btn {
+    font-size: 11px;
+  }
+  .medical-popup-big__text {
+    font-size: 18px;
+  }
+}

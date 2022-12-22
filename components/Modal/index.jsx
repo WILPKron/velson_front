@@ -71,6 +71,7 @@ const Modal = ({ show, close }) => {
   return (
     <>
       {show ? (
+
         <div
           className="modalContainer"
           onClick={() => {
