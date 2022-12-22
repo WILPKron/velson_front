@@ -1,0 +1,49 @@
+.uteka__container {
+    margin-top: 64px;
+}
+
+.uteka__title_body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.uteka__title {
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 150%;
+    color: #0068d7;
+    text-align: center;
+}
+
+.uteka__logo {
+    cursor: pointer;
+}
+
+.uteka__logo:hover {
+    opacity: 0.8;
+}
+
+.uteka__title span {
+    font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    .uteka__container {
+        margin-top: 64px;
+    }
+    .uteka__title_body {
+        flex-direction: column;
+    }
+}
+@media (max-width: 768px) {
+    .uteka__title {
+        line-height: 110%;
+    }
+}
+@media (max-width: 560px) {
+    .uteka__title {
+        font-size: 32px;
+    }
+}

@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "DIN Pro Cond";
+    src: url("DINPro-CondensedLight.eot");
+    src: local("DIN Pro Condensed Light"), local("DINPro-CondensedLight"),
+        url("DINPro-CondensedLight.eot?#iefix") format("embedded-opentype"),
+        url("DINPro-CondensedLight.woff") format("woff"),
+        url("DINPro-CondensedLight.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}

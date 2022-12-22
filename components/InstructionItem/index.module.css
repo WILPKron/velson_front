@@ -1,0 +1,72 @@
+.instruction__item {
+    margin-top: 64px;
+}
+
+.item__title {
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 150%;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 32px;
+}
+
+.item__text {
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: left;
+    color: #ffffff;
+}
+
+.item__text ul {
+    margin: 0;
+    margin-left: 32px;
+    list-style-type: initial;
+}
+
+.item__text li {
+    margin-bottom: 8px;
+}
+@media (max-width: 1580px) {
+    .instruction__item {
+        margin-top: 32px;
+        font-size: 16px;
+    }
+    .item__title {
+        margin-bottom: 16px;
+        font-size: 32px;
+    }
+
+    .item__text {
+        font-size: 16px;
+    }
+}
+@media (max-width: 768px) {
+    .instruction__item {
+        margin-top: 32px;
+    }
+
+    .item__title {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+
+    .item__text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 525px) {
+    .instruction__item {
+        margin-top: 32px;
+    }
+
+    .item__title {
+        font-size: 24px;
+    }
+
+    .item__text {
+        font-size: 16px;
+    }
+}

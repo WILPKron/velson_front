@@ -1,0 +1,94 @@
+.qualitySleep__container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 128px 0 64px 0;
+    position: relative;
+}
+
+.qualitySleep__container::after {
+    content: "*Исследования профессора психиатрии Даниэля Крипке";
+    display: block;
+    margin-top: 64px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #565e71;
+    opacity: 0.5;
+    width: 100%;
+}
+
+.qualitySleep__title {
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 150%;
+    color: #565e71;
+    text-align: center;
+}
+
+.qualitySleep__title span {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.qualitySleep__title img {
+    margin-top: 8px;
+}
+
+@media (max-width: 1580px) {
+    .qualitySleep__container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 64px 80px 32px 80px;
+    }
+
+    .qualitySleep__title {
+        font-size: 32px;
+    }
+
+    .qualitySleep__title img {
+        margin-top: 8px;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .qualitySleep__container {
+        padding: 128px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .qualitySleep__container {
+        padding: 64px 32px 32px 32px;
+    }
+    .qualitySleep__title {
+        font-size: 32px;
+    }
+    .qualitySleep__title img {
+        margin-top: 4px;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 525px) {
+    .qualitySleep__container {
+        padding: 32px 18px 32px 18px;
+    }
+    .qualitySleep__container::after {
+        font-size: 14px;
+    }
+    .qualitySleep__title {
+        font-size: 24px;
+    }
+    .qualitySleep__title img {
+        margin-top: 2px;
+        width: 18px;
+        height: 18px;
+    }
+}

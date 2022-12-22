@@ -1,0 +1,163 @@
+.instruction__bg {
+    background-color: #04367c;
+    background-image: url("../../assets/images/instruction/bg-instruction.webp");
+    background-size: 100% 100%;
+    border-radius: 80px 80px 0px 0px;
+}
+
+.instruction__bg_open {
+    background-image: url("../../assets/images/instruction/bg-instruction-open.webp") !important;
+}
+
+.instruction__container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 128px 0px;
+}
+
+.instruction__title {
+    position: relative;
+    font-weight: 200;
+    font-size: 64px;
+    line-height: 110%;
+    text-align: center;
+    color: #ffffff;
+    padding-bottom: 64px;
+}
+
+.instruction__title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        #ffffff 51.04%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.instruction__button {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    margin-top: 64px;
+    margin-right: auto;
+    padding: 20px 48px 20px 0;
+    background: transparent;
+    border: none;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.instruction__button svg {
+    width: 30px;
+    height: 15px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 300ms;
+}
+.instruction__button span {
+    margin-left: 12px;
+    transition: transform 0.3s;
+}
+    @media (min-width: 1581px) {
+    .instruction__button:hover span {
+        transform: translateY(30%);
+    }
+    .instruction__button_open span {
+        transform: rotate(-180deg);
+    }
+    .instruction__button_open:hover span {
+        transform: translateY(-30%) rotate(-180deg);
+    }
+}
+@media (max-width: 1580px) {
+    .instruction__button {
+        font-size: 12px;
+        padding: 15px 36px 15px 0;
+    }
+    .instruction__button>span {
+        display: inline-block;
+        width: 22px;
+        height: 11px;
+        transform: translateY(1px);
+    }
+    .instruction__button_open>span {
+        transform: translateY(4px) rotate(-180deg);
+    }
+    .instruction__container {
+        max-width: 100%;
+        margin: 0;
+        padding: 92px 80px;
+    }
+    .instruction__title {
+        padding-bottom: 32px;
+        font-size: 48px;
+    }
+    .instruction__bg {
+        background-image: url("../../assets/images/instruction/bg-instruction-1440.webp");
+    }
+    .instruction__bg_open {
+        background-image: url("../../assets/images/instruction/bg-instruction-open.webp") !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .instruction__bg {
+        background-image: url("../../assets/images/instruction/bg-instruction-1024.webp");
+        border-radius: 40px 40px 0px 0px;
+    }
+    .instruction__bg_open {
+        background-image: url("../../assets/images/instruction/bg-instruction-open-1024.webp") !important;
+    }
+    .instruction__container {
+        padding: 128px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .instruction__bg {
+        background-image: url("../../assets/images/instruction/bg-instruction-768.webp");
+    }
+    .instruction__bg_open {
+        background-image: url("../../assets/images/instruction/bg-instruction-open-1024.webp") !important;
+    }
+    .instruction__container {
+        padding: 64px 32px;
+    }
+    .instruction__title {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 525px) {
+    .instruction__bg {
+        background-image: url("../../assets/images/instruction/bg-instruction-525.webp");
+        border-radius: 20px 20px 0px 0px;
+    }
+    .instruction__bg_open {
+        background-image: url("../../assets/images/instruction/bg-instruction-open-525.webp") !important;
+    }
+    .instruction__container {
+        padding: 64px 16px 32px 16px;
+    }
+    .instruction__title {
+        font-size: 32px;
+        padding-bottom: 32px;
+    }
+
+    .instruction__button {
+        margin-top: 32px;
+    }
+}

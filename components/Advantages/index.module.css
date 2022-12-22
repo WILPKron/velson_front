@@ -1,0 +1,142 @@
+.advantages__bg {
+    background-color: #04367c;
+    background-image: url("../../assets/images/healthy/advantages/bg-advantages.webp");
+    background-size: 100% 100%;
+    border-radius: 80px;
+}
+
+.advantages__container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 128px 0;
+}
+
+.advantages__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 128px;
+}
+
+.item__image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 32px;
+}
+
+.item__image::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 2.08%,
+        #ffffff 49.72%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.item__image span {
+    width: 192px;
+    height: 192px;
+}
+
+.item__text {
+    margin-top: 32px;
+    font-weight: 200;
+    font-size: 32px;
+    line-height: 150%;
+    color: #ffffff;
+    text-align: center;
+}
+
+@media (max-width: 1580px) {
+    .advantages__container {
+        max-width: 100%;
+        margin: 0;
+        padding: 92px 80px;
+    }
+
+    .advantages__body {
+        grid-column-gap: 24px;
+        grid-row-gap: 48px;
+    }
+
+    .item__image {
+        padding-bottom: 16px;
+    }
+    
+    .item__image span {
+        width: 122px;
+        height: 122px;
+    }
+    .item__image>span {
+        width: 122px;
+        height: 122px;
+    }
+
+    .item__text {
+        margin-top: 16px;
+        font-size: 24px;
+    }
+    
+}
+
+@media (max-width: 1024px) {
+    .advantages__bg {
+        background-image: none;
+        border-radius: 40px;
+    }
+    .advantages__container {
+        padding: 128px 32px;
+    }
+    .advantages__body {
+        grid-template-columns: 1fr;
+        grid-row-gap: 64px;
+    }
+}
+
+@media (max-width: 768px) {
+    .advantages__container {
+        padding: 64px 32px;
+    }
+    .item__image {
+        padding-bottom: 16px;
+    }
+    .item__text {
+        margin-top: 16px;
+        font-size: 24px;
+    }
+
+    .advantages__body {
+        grid-template-columns: 1fr;
+        grid-row-gap: 48px;
+    }
+
+    .advantages__item {
+        max-width: 464px;
+        place-self: center;
+    }
+}
+
+@media (max-width: 525px) {
+    .advantages__container {
+        padding: 64px 16px;
+    }
+    .item__image span {
+        width: 156px;
+        height: 156px;
+    }
+    .item__image>span {
+        width: 156px;
+        height: 156px;
+    }
+    .item__text {
+        font-size: 18px;
+    }
+}

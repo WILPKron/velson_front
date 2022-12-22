@@ -1,0 +1,185 @@
+.fallSleep__container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 128px 0;
+}
+
+.fallSleep__title {
+    font-style: normal;
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 150%;
+    color: #565e71;
+    text-align: center;
+}
+
+.fallSleep__title span {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.fallSleep__title img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+.fallSleep__body {
+    margin-top: 128px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fallSleep__description {
+    width: 49%;
+}
+
+.fallSleep__description p {
+    width: 100%;
+    font-weight: 200;
+    font-size: 32px;
+    line-height: 150%;
+    color: #565e71;
+    text-align: left;
+}
+
+.fallSleep__buttons {
+    margin-top: 64px;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.fallSleep__image {
+    width: 586px;
+    height: 586px;
+}
+
+.fallSleep__image img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1580px) {
+    .fallSleep__container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 64px 92px;
+    }
+
+    .fallSleep__image {
+        width: calc(50vw - 160px);
+        height: calc(50vw - 160px);
+    }
+
+    .fallSleep__title {
+        font-size: 32px;
+    }
+
+    .fallSleep__body {
+        margin-top: 128px;
+    }
+
+    .fallSleep__description p {
+        font-size: 24px;
+    }
+
+    .fallSleep__image {
+        width: 400px;
+        height: 400px;
+    }
+    .fallSleep__title img {
+        margin-top: 4px;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .fallSleep__container {
+        padding: 128px 32px;
+    }
+
+    .fallSleep__description {
+        width: 65.4%;
+    }
+
+    .fallSleep__image {
+        width: calc(37.2vw - 60px);
+        height: calc(37.2vw - 60px);
+    }
+}
+
+@media (max-width: 768px) {
+    .fallSleep__container {
+        padding: 64px 32px;
+    }
+
+    .fallSleep__title {
+        font-size: 32px;
+    }
+
+    .fallSleep__title img {
+        margin-top: 4px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .fallSleep__body {
+        margin-top: 64px;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 64px;
+    }
+
+    .fallSleep__description {
+        width: 100%;
+    }
+
+    .fallSleep__description p {
+        font-size: 24px;
+    }
+
+    .fallSleep__buttons {
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .fallSleep__image {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 525px) {
+    .fallSleep__container {
+        padding: 32px 16px;
+    }
+
+    .fallSleep__title {
+        font-size: 24px;
+    }
+
+    .fallSleep__title img {
+        margin-top: 2px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .fallSleep__description p {
+        font-size: 18px;
+    }
+
+    .fallSleep__buttons {
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 32px;
+    }
+
+    .fallSleep__image {
+        width: 242px;
+        height: 242px;
+    }
+}

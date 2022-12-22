@@ -1,0 +1,241 @@
+.slider__body {
+    margin-top: 128px;
+    display: flex;
+}
+
+.slider__item {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 91px;
+    animation: 0.5s opacitySlide;
+}
+
+.item__text {
+    width: 44.4%;
+}
+
+.item__title {
+    font-weight: 200;
+    font-size: 64px;
+    line-height: 110%;
+    color: #0068d7;
+    text-align: left;
+}
+
+.item__title_mobile {
+    font-weight: 200;
+    font-size: 64px;
+    line-height: 110%;
+    color: #0068d7;
+    text-align: center;
+    animation: 0.5s opacitySlide;
+}
+
+@keyframes opacitySlide {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.item__subtitle {
+    margin-top: 64px;
+    font-weight: 200;
+    font-size: 32px;
+    line-height: 150%;
+    color: #565e71;
+    text-align: left;
+}
+
+.item__image {
+    width: 606px;
+}
+
+.item__image img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1580px) {
+    .item__image {
+        width: calc(52vw - 160px);
+    }
+
+    .slider__body {
+        margin-top: 92px;
+    }
+
+    .item__title {
+        font-size: 48px;
+    }
+
+    .item__subtitle {
+        margin-top: 32px;
+        font-size: 24px;
+    }
+
+    .item__image img {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .slider__body {
+        flex-direction: column;
+        align-items: center;
+    }
+    .slider__item {
+        margin-top: 64px;
+        margin-left: 0;
+    }
+    .item__text {
+        width: 48.8%;
+    }
+    .item__title {
+        display: none;
+    }
+    .item__subtitle {
+        margin-top: 0;
+    }
+    .item__image {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider__body {
+        margin-top: 64px;
+    }
+    .item__title_mobile {
+        font-size: 48px;
+    }
+    .item__subtitle {
+        font-size: 24px;
+    }
+    .item__image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .item__image img {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 525px) {
+    .slider__item {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 32px;
+    }
+    .item__text {
+        width: 100%;
+    }
+    .item__title_mobile {
+        font-size: 32px;
+    }
+    .item__subtitle {
+        font-size: 18px;
+    }
+    .item__image {
+        width: 242px;
+        height: 242px;
+    }
+
+    .item__image img {
+        width: 242px;
+        height: 242px;
+    }
+}
+
+
+.slider__switch {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.slider__switch svg {
+    cursor: pointer;
+}
+
+.slider__switch svg:first-child {
+    transform: rotate(180deg);
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+}
+
+.switch__dot {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #0068d7;
+    border-radius: 100%;
+    transition: transform 200ms;
+}
+
+.switch__dot_active {
+    transform: scale(1.5);
+    background-color: #0068d7;
+}
+
+@media (max-width: 1580px) {
+    .slider__switch {
+        gap: 24px;
+    }
+
+    .slider__switch svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .switch__dot {
+        cursor: pointer;
+        width: 12px;
+        height: 12px;
+        border: 2px solid #0068d7;
+        border-radius: 100%;
+        transition: transform 200ms;
+    }
+    
+}
+
+
+@media (max-width: 1024px) {
+    .slider__switch {
+        flex-direction: row;
+        margin-top: 64px;
+    }
+
+    .slider__switch svg:first-child {
+        transform: rotate(90deg);
+    }
+    .slider__switch :first-child img {
+        transform: rotate(90deg);
+    }
+    .slider__switch svg:last-child {
+        transform: rotate(-90deg);
+    }
+    .slider__switch :last-child img {
+        transform: rotate(-90deg);
+    }
+}
+
+@media (max-width: 525px) {
+    .slider__switch {
+        margin-top: 32px;
+    }
+}

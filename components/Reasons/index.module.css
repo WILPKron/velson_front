@@ -1,0 +1,271 @@
+.reasons__bg {
+    background-image: url(../../assets/images/healthy/reasons/bg-reasons.webp);
+    background-size: 100% 100%;
+}
+
+.reasons__container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 128px 0;
+}
+
+.reasons__title {
+    font-weight: 200;
+    font-size: 64px;
+    line-height: 110%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.reasons__title span {
+    font-weight: 700;
+}
+
+.reasons__subtitle {
+    margin-top: 64px;
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 150%;
+    text-align: center;
+    color: #ffffff;
+    display: inline-block;
+}
+
+.reasons__subtitle span {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.reasons__subtitle img {
+    margin-top: 8px;
+    width: 34px;
+    height: 34px;
+}
+
+.reasons__item {
+    width: 464px;
+    height: 282px;
+}
+
+.reasons__body {
+    margin-top: 128px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 128px;
+    
+}
+
+.item__image {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 32px;
+    
+}
+
+.item__image img {
+    width: 144px;
+    height: 150px;
+}
+
+.item__image::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 2.08%,
+        #ffffff 49.72%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.item__text {
+    margin-top: 32px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+    color: #ffffff;
+}
+
+@media (max-width: 1580px) {
+    .reasons__container {
+        max-width: 100%;
+        margin: 0;
+        padding: 92px 92px;
+    }
+    .reasons__body {
+        grid-column-gap: 24px;
+        grid-row-gap: 48px;
+        max-width: 955px;
+        margin: 64px auto 0;
+    }
+
+    .reasons__title {
+        font-size: 48px;
+    }
+
+    .reasons__subtitle {
+        margin-top: 32px;
+        font-size: 32px;
+    }
+
+    .reasons__subtitle img {
+        margin-top: 4px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .reasons__item {
+        width: 302px;
+        /* margin: 0 auto; */
+        /* width: 20vw; */
+        height: 174px;
+    }
+
+    .item__image {
+        padding-bottom: 16px;
+    }
+
+    .item__image span {
+        width: 92px;
+        height: 92px;
+    }
+
+    .item__text {
+        margin-top: 16px;
+        font-size: 16px;
+    }
+}
+@media (max-width: 1128px) {
+    .reasons__item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .reasons__bg {
+        background-image: url(../../assets/images/healthy/reasons/bg-reasons-1024.webp);
+    }
+    .reasons__container {
+       
+        padding: 128px 32px;
+    }
+    .reasons__body {
+        /* grid-template-columns: repeat(auto-fill,250px); */
+        grid-column-gap: 20px;
+        grid-row-gap: 64px;
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .reasons__bg {
+        background-image: url(../../assets/images/healthy/reasons/bg-reasons-768.webp);
+    }
+    .reasons__container {
+        padding: 64px 32px;
+    }
+
+    .reasons__item {
+        /* width: 224px; */
+        height: 174px;
+    }
+
+    .reasons__title {
+        font-size: 48px;
+    }
+    .reasons__subtitle {
+        font-size: 32px;
+        margin-top: 32px;
+    }
+    .reasons__subtitle img {
+        margin-top: 4px;
+        width: 24px;
+        height: 24px;
+    }
+    .reasons__body {
+        margin-top: 44px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 16px;
+        grid-row-gap: 48px;
+    }
+    .item__image {
+        padding-bottom: 16px;
+    }
+
+    .item__text {
+        margin-top: 16px;
+    }
+}
+@media(max-width:730px){
+    .reasons__body {
+        /* grid-template-columns: repeat(auto-fill,200px) */
+    }
+}
+@media (max-width: 525px) {
+    .reasons__bg {
+        background-image: url(../../assets/images/healthy/reasons/bg-reasons-525.webp);
+    }
+    .reasons__container {
+        padding: 64px 16px;
+    }
+    .reasons__title {
+        font-size: 32px;
+    }
+    .reasons__subtitle {
+        font-size: 24px;
+    }
+    .reasons__subtitle img{
+        width: 18px;
+        height: 18px;
+    }
+    .reasons__item {
+        place-self: center;
+    }
+    .reasons__body {
+        grid-template-columns: 1fr;
+    }
+    .item__image span {
+        width: 112px;
+        height: 118px;
+    }
+    .item__text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1536px) {
+  .reasons__container {
+      padding-top: 64px;
+  }
+}
+
+@media (max-width: 500px) {
+  .reasons__container {
+      padding-top: 32px;
+  }
+
+  .reasons__subtitle {
+      margin-top: 16px;
+  }
+
+  .reasons__body {
+      margin-top: 32px;
+  }
+
+  .reasons__body {
+      grid-row-gap: 32px;
+  }
+
+  .reasons__item {
+      height: unset;
+  }
+}
