@@ -1253,60 +1253,60 @@ button:focus {
       // background-image: url("../assets/images/ShoppingCart.svg");
   }
 
-  @media screen and (max-width: 768px) {
-      position: fixed;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      right: auto;
-      float: left;
-      top: auto;
-      bottom: 50px;
-      left: 45px;
-      width: 263px;
-      height: 64px;
-      background: #0068d7;
-      border-radius: 32px 32px 32px 0px;
-      z-index: 99999;
-      cursor: pointer;
-      &-bottom{
-        bottom: 4px;
-      }
-      &__text {
-          width: 100%;
-          font-family: "Manrope";
-          font-style: normal;
-          font-weight: 800;
-          font-size: 16px;
-          line-height: 150%;
-          text-transform: uppercase;
-          color: #ffffff;
-          padding: 32px 0px;
-          transform: rotate(0);
-          white-space: nowrap;
-      }
-
-      &__left {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: center;
-          min-width: 61px;
-          height: 61px;
-          background: #ffffff;
-          border: 2px solid #0068d7;
-          border-radius: 32px 32px 32px 0px;
-      }
-  }
-  @media screen and (max-width: 674px) {
-    bottom: 70px;
-    &.order-now-bottom {
-      bottom: 8px;
-    }
-  }
-  @media screen and (max-width: 425px) {
-    bottom: 56px;
-  }
+  //@media screen and (max-width: 768px) {
+  //    position: fixed;
+  //    display: flex;
+  //    flex-direction: row;
+  //    align-items: center;
+  //    right: auto;
+  //    float: left;
+  //    top: auto;
+  //    bottom: 50px;
+  //    left: 45px;
+  //    width: 263px;
+  //    height: 64px;
+  //    background: #0068d7;
+  //    border-radius: 32px 32px 32px 0px;
+  //    z-index: 99999;
+  //    cursor: pointer;
+  //    &-bottom{
+  //      bottom: 4px;
+  //    }
+  //    &__text {
+  //        width: 100%;
+  //        font-family: "Manrope";
+  //        font-style: normal;
+  //        font-weight: 800;
+  //        font-size: 16px;
+  //        line-height: 150%;
+  //        text-transform: uppercase;
+  //        color: #ffffff;
+  //        padding: 32px 0px;
+  //        transform: rotate(0);
+  //        white-space: nowrap;
+  //    }
+  //
+  //    &__left {
+  //        display: flex;
+  //        flex-direction: row;
+  //        align-items: center;
+  //        justify-content: center;
+  //        min-width: 61px;
+  //        height: 61px;
+  //        background: #ffffff;
+  //        border: 2px solid #0068d7;
+  //        border-radius: 32px 32px 32px 0px;
+  //    }
+  //}
+  //@media screen and (max-width: 674px) {
+  //  bottom: 70px;
+  //  &.order-now-bottom {
+  //    bottom: 8px;
+  //  }
+  //}
+  //@media screen and (max-width: 425px) {
+  //  bottom: 56px;
+  //}
 }
 
 .sequence-wrap {
@@ -1359,29 +1359,29 @@ button:focus {
   }
 }
 
-@media (max-width: 500px) {
-.order-now {
-  width: 174px;
-  height: 40px;
-  left: 16px;
-}
-.order-now__left {
-  min-width: 37px;
-  height: 35px;
-
-}
-
-.order-now__left img {
-  max-width: 90%;
-
-}
-
-.order-now__text {
-  font-size: 12px;
-  line-height: 18px;
-  padding-right: 5px;
-}
-}
+//@media (max-width: 500px) {
+//.order-now {
+//  width: 174px;
+//  height: 40px;
+//  left: 16px;
+//}
+//.order-now__left {
+//  min-width: 37px;
+//  height: 35px;
+//
+//}
+//
+//.order-now__left img {
+//  max-width: 90%;
+//
+//}
+//
+//.order-now__text {
+//  font-size: 12px;
+//  line-height: 18px;
+//  padding-right: 5px;
+//}
+//}
 
 
 /* LEARN MORE */

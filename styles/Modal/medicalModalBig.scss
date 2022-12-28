@@ -37,34 +37,37 @@
 
 .medical-popup-big__text {
   font-style: normal;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 1.1;
   text-align: center;
   text-transform: uppercase;
-  margin: 0 0 40px;
+  margin: 0 0 20px;
+
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 110%;
 
   span {
-    color: #bd2d47;
+    color: #0068D7;
   }
 
 }
 .medical-popup-big__image {
-  max-width: 500px;
+  max-width: 600px;
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
   overflow: hidden;
 }
 .medical-popup-big__btn {
   text-transform: uppercase;
-  background-color: #bd2d47;
+  background-color: #0068D7;
   color: #fff;
-  padding: 13px 22px;
+  padding: 12px 24px;
   border-radius: 50px;
   font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 12px;
 }
 .medical-popup-big__close {
   position: absolute;

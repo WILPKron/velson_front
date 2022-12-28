@@ -7,8 +7,7 @@ import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 
 import Modal from "../Modal";
-import MedicalPopupSmall from "../Modal/MedicalPopupSmall";
-import MedicalPopupBig from "../Modal/medicalPopupBig";
+import MedicalModal from "../Modal/MedicalModal";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -84,10 +83,8 @@ const Layout = ({ children, data }) => {
         ref={ref}
       >
 
-        <MedicalPopupSmall data={small}/>
-        <MedicalPopupBig data={large}/>
-
         <Modal show={isModalOpen} close={() => setIsModalOpen(false)} />
+        <MedicalModal data={{large, small}}></MedicalModal>
         <div className="content-wrapper navbar__wrapper">
           <Link href="/">
             <Image
