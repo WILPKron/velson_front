@@ -5,6 +5,7 @@ import { saveAs } from "file-saver";
 import Image from "next/image";
 import Button from "../../components/UI/Button";
 import { images } from "../../constants/index";
+import { BACKEND_ADDRESS } from "../../pages/api/config";
 import BlockWrapper from "../BlockWrapper";
 
 import how1comp from "../../assets/images/how1comp.png";
@@ -96,6 +97,10 @@ const HowInstructionBlock = () => {
             <span className="default-button__text">СКАЧАТЬ ИНСТРУКЦИЮ</span>
           </a>
         </div>
+      </div>
+      <div className="block__wrapper content-wrapper block__wrapper--how content-wrapper block__wrapper--how_blockimage">
+        <video className="block__wrapper--how_video" width="860" height="484" controls="controls"
+               src={`${BACKEND_ADDRESS}/upload/welson_21.12_15_v1_mix.mp4`}></video>
       </div>
     </>
   );
