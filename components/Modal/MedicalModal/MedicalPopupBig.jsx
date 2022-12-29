@@ -21,7 +21,7 @@ const MedicalPopupBig = ({ data, showBigPopup, hideBigPopup, clickLinkPopup }) =
                         <a className="medical-popup-big__btn" href={data.btnLink} onClick={clickLinkPopup} target="_blank">
                             {data.btnText}
                             <svg width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M26 8.96569L17.4474 1M26 8.96569L17.4474 16.2941M26 8.96569H0" stroke="white" stroke-width="2"/>
+                                <path d="M26 8.96569L17.4474 1M26 8.96569L17.4474 16.2941M26 8.96569H0" stroke="white" strokeWidth="2"/>
                             </svg>
                         </a>
                     </div>

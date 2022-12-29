@@ -43,7 +43,6 @@ export async function getServerSideProps(context) {
   const res = await axios.get(`${BACKEND_URL}/layout/`);
 
   const data = res.data;
-    console.log(data, 'data')
   return {
     props: { api: data },
   };

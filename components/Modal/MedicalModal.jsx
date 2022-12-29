@@ -4,8 +4,8 @@ import MedicalPopupBig from "./MedicalModal/MedicalPopupBig";
 import MedicalPopupSmall from "./MedicalModal/MedicalPopupSmall";
 
 const MedicalPopup = ({ data }) => {
-    const [showBigPopup, setShowBigPopup] = useState(true);
-    const [showSmallPopup, setShowSmallPopup] = useState(true);
+    const [showBigPopup, setShowBigPopup] = useState(false);
+    const [showSmallPopup, setShowSmallPopup] = useState(false);
 
     const [interShowPopupBig, setInterShowPopupBig] = useState(2);
     const [interShowPopupSmall, setInterShowPopupSmall] = useState(2);
@@ -29,8 +29,11 @@ const MedicalPopup = ({ data }) => {
             setTimeout(() => setShowSmallPopup(true), 2000)
         }
     }
+
     useEffect(() => {
-        document.body.style = showBigPopup ? 'overflow: hidden' : false
+        if(data?.large?.active === 'Y') {
+            document.body.style = showBigPopup ? 'overflow: hidden' : false
+        }
     }, [showBigPopup])
 
     useEffect(() => {
@@ -60,7 +63,7 @@ const MedicalPopup = ({ data }) => {
     }
 
     useEffect(() => {
-        const pathname ='/'
+        const pathname = '/'
         if (location.hash || location.pathname !== pathname) {
             if (!showSmallPopup && !sessionStorage.getItem("keyLink")) {
                 setShowSmallPopup(true)
@@ -79,18 +82,18 @@ const MedicalPopup = ({ data }) => {
 
     return (
         <>
-            <MedicalPopupBig
+            {data?.large?.active === 'Y' ? <MedicalPopupBig
                 data={data.large}
                 showBigPopup={showBigPopup}
                 hideBigPopup={hideBigPopup}
                 clickLinkPopup={clickLinkPopup}
-            ></MedicalPopupBig>
-            <MedicalPopupSmall
+            ></MedicalPopupBig> : null}
+            {data?.small?.active === 'Y' ? <MedicalPopupSmall
                 data={data.small}
                 showSmallPopup={showSmallPopup}
                 hideSmallPopup={hideSmallPopup}
                 clickLinkMinPopup={clickLinkMinPopup}
-            ></MedicalPopupSmall>
+            ></MedicalPopupSmall> : null}
         </>
     );
 };

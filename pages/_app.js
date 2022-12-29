@@ -54,7 +54,6 @@ MyApp.getInitialProps = async (ctx) => {
           code: ctx.router.asPath,
         })
     );
-    console.log(res.data.popupInfo, 'res.data1')
     const data = res.data;
 
     return { api: data };
