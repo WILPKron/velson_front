@@ -63,7 +63,7 @@ export const FullWidth = ({ articlesContent }) => {
               <a></a>
             </Link>
             <div class="learn-more-grid-item-img">
-              <Image priority src={`${a.previewPicture.src}`} layout="fill" />
+              <img src={a.previewPicture.src} alt=""/>
             </div>
             <div class="learn-more-block-description">
               <Link href={`/${a.code}`}>
