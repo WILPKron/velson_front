@@ -24,7 +24,9 @@ const MedicalPopupBig = ({ data, showBigPopup, hideBigPopup, clickLinkPopup }) =
                                 <path d="M26 8.96569L17.4474 1M26 8.96569L17.4474 16.2941M26 8.96569H0" stroke="white" strokeWidth="2"/>
                             </svg>
                         </a>
+                        <span className="medical-popup-big__text">Реклама. Рекламодатель ООО «НПО Петровакс Фарм»</span>
                     </div>
+
                 </div>
             </div> : null}
         </>

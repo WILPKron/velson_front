@@ -68,6 +68,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-bottom: 20px;
 }
 .medical-popup-big__close {
   position: absolute;
@@ -88,4 +89,12 @@
   .medical-popup-big__text {
     font-size: 18px;
   }
+}
+
+.medical-popup-big__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #505050;
+  opacity: 0.5;
 }
