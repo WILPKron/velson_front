@@ -195,6 +195,7 @@ button:focus {
                 left: 0;
                 z-index: -1;
                 background: url(../assets/images/actionBg1.png) 0 0 no-repeat;
+                background-size: 50%;
                 // background-size: contain;
                 @media (max-width: 1580px) {
                     background-position: -10vw 0vw;
