@@ -220,6 +220,7 @@ button:focus {
                 right: 0%;
                 z-index: -1;
                 background: url(../assets/images/actionBg2.png) 100% 0 no-repeat;
+                background-size: 30%;
                 @media (max-width: 1580px) {
                     right: -20%;
                 }
